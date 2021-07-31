@@ -28,8 +28,9 @@
 
             <c:forEach var="item" items="${todoData.items}">
 
-                <c:url var="deleteUrl" value="${Nappings.DELETE_ITEM}">
-                    <c:param name="id" value="{item.id}"></c:param>
+                <c:url var="deleteUrl" value="${Mappings.DELETE_ITEM}">
+                    <%-- setting parameter for delete item --%>
+                    <c:param name="id" value="${item.id}"></c:param>
                 </c:url>
 
                 <tr>
