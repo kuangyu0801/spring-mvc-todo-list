@@ -2,10 +2,10 @@ This is a spring mvc project from Udemy course: Java Spring Tutorial Masterclass
 
 The project is used to demonstrate my ability in spring MVC
 
-Setup to be noticed:
-- embeded Tomcat server with cargo
+Setup to be noticed with POM file and can be used as template:
+- embedded Tomcat server with cargo
 - jstl tags
-- lombak annoation
+- lombak annotation
 
 Spring
 - model
