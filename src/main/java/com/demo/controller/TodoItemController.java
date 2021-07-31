@@ -70,13 +70,20 @@ public class TodoItemController {
         // redirecting to item page
         return "redirect:/" + Mappings.ITEMS;
     }
-
+    // TODO: 其實他這個做法並不好! 應該使用delete method
     @GetMapping(Mappings.DELETE_ITEM)
     public String deleteItem(@RequestParam int id) {
         log.info("Deleting item with id: {}", id);
         todoItemService.removeItem(id);
         // redirecting to item page
         return "redirect:/" + Mappings.ITEMS;
+    }
+    @GetMapping(Mappings.VIEW_ITEM)
+    public String viewItem(@RequestParam int id, Model model) {
+        TodoItem todoItem = todoItemService.getItem(id);
+        model.addAttribute(AttributeNames.TODO_ITEM, todoItem);
+        return ViewNames.VIEW_ITEM;
+
     }
 
 }
