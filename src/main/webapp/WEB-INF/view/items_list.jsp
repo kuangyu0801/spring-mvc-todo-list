@@ -23,11 +23,14 @@
             <tr>
                 <th>Title</th>
                 <th>Deadline</th>
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
 
             <c:forEach var="item" items="${todoData.items}">
-
+                <c:url var="editUrl" value="${Mappings.ADD_ITEM}">
+                    <c:param name="id" value="${item.id}"></c:param>
+                </c:url>
                 <c:url var="deleteUrl" value="${Mappings.DELETE_ITEM}">
                     <%-- setting parameter for delete item --%>
                     <c:param name="id" value="${item.id}"></c:param>
@@ -36,7 +39,8 @@
                 <tr>
                     <td><c:out value="${item.title}"/></td>
                     <td><c:out value="${item.deadline}"/></td>
-                        <%-- add delete buttom that redirect to Delete page --%>
+                    <td><a href="${editUrl}">Edit</a></td>
+                    <%-- add delete buttom that redirect to Delete page --%>
                     <td><a href="${deleteUrl}">Delete</a></td>
                 </tr>
             </c:forEach>
