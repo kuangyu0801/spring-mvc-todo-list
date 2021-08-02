@@ -12,6 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 // import spring mvc configuration
+// TODO: how to configure via xml file?
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = "com.demo")

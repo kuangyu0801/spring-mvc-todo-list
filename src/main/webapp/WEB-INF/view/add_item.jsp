@@ -7,16 +7,17 @@
 --%>
 <%-- using jstl tag --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- using form tag--%>
+<%-- using form tag from spring--%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page import="com.demo.util.AttributeNames" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.demo.util.AttributeNames" %>
 <html>
 <head>
     <title>Add Items</title>
 </head>
 <body>
     <div align="center">
+        <%-- bind form data to a bean --%>
         <%-- model attribute should match --%>
         <form:form method="POST" modelAttribute="${AttributeNames.TODO_ITEM}">
             <table>

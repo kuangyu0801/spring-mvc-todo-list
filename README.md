@@ -8,6 +8,7 @@ Setup to be noticed with POM file and can be used as template:
 - embedded Tomcat server with cargo
 - jstl tags
 - lombak annotation
+- logback
 
 Spring
 - model
@@ -15,6 +16,8 @@ Spring
 
 ![home](docs/home.png)
 ![home](docs/list.png)
-![home](docs/addItem.png)
+![home](docs/additem.png)
 ![home](docs/updateItem.png)
 ![home](docs/viewItem.png)
+
+-Service layer pattern: https://en.wikipedia.org/wiki/Service_layer_pattern
